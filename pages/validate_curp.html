@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar CURP</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #0072ff;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #0072ff;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        .response {
+            margin-top: 20px;
+            font-size: 1.1em;
+            padding: 10px;
+            color: #fff;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .success {
+            background-color: #28a745;
+            display: block;
+        }
+
+        .error {
+            background-color: #dc3545;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Ingrese su CURP</h2>
+        <form id="curpForm">
+            <input type="text" id="curp" name="curp" required maxlength="18">
+            <button type="button" onclick="validarCurp()">Validar CURP</button>
+        </form>
+        <div id="response" class="response"></div>
+    </div>
+    <script src="/js/validate_curp.js"></script>
+</body>
+
+</html>
